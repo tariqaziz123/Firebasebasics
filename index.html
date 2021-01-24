@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Restaurant and cafe</h1>
+
+        <div class="content">
+
+            <form id="add-cafe-form">
+                <input type="text" name="name" placeholder="Cafe name">
+                <input type="text" name="city" placeholder="city name">
+                <button>Add Cafe</button>
+            </form>
+
+            <ul id="cafe-list">
+                
+            </ul>
+
+        </div>
+        
+            
+
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+
+            <script>
+              // Your web app's Firebase configuration
+              // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+              var firebaseConfig = {
+                apiKey: "AIzaSyBSc7XwN6SNWdy_z40xxYEqSm6YlG0Eit0",
+                authDomain: "nifty-state-291204.firebaseapp.com",
+                databaseURL: "https://nifty-state-291204-default-rtdb.firebaseio.com",
+                projectId: "nifty-state-291204",
+                storageBucket: "nifty-state-291204.appspot.com",
+                messagingSenderId: "326574170434",
+                appId: "1:326574170434:web:1e0a1eb3a008e3cee9a8db",
+                measurementId: "G-R62KJ6Z3QV"
+              };
+              // Initialize Firebase
+              firebase.initializeApp(firebaseConfig);
+              const db=firebase.firestore();
+              db.settings({timestampsInSnapshots:true});
+              firebase.analytics();
+            </script>
+            <script src="app.js"></script>
+    </body>
+</html>
